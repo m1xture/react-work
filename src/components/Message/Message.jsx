@@ -1,3 +1,3 @@
-const Message = ({text}) => <p>{text}</p>;
+const Message = ({text}) => <p className="text">{text}</p>;
 
 export default Message;

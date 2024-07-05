@@ -1,5 +1,5 @@
 const Button = ({ func }) => (
-  <button type="button" onClick={func}>
+  <button type="button" className="button" onClick={func}>
     button
   </button>
 );
