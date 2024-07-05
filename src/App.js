@@ -1,33 +1,18 @@
 import "./App.css";
-import { Fragment } from "react";
-import Colors from "./components/Colors/Colors";
+import Greeting from "./components/Greeting/Greeting";
+import Message from "./components/Message/Message";
+import Button from "./components/Button/Button";
 
 function App() {
-  const text = "Hello React!";
-
-  const obj = {
-    name: "Google",
-    url: "https://google.com",
-  };
-  const myColors = ["blue", "green", "white", "yellow"];
-  // const Colors = ({arr}) => (
-  //   <ul>
-  //     {arr.map((color) => (
-  //       <li key={color}>{color}</li>
-  //     ))}
-  //   </ul>
-  // );
+  function clickFn() {
+    console.log("another click happened");
+  }
+  const username = "Tetiana";
   return (
     <>
-      <h1>{text}</h1>
-      <p>Welcome to website!</p>
-      <img
-        src="https://cdn-media-1.freecodecamp.org/images/1*jnqXL4Q-iW0qxodFDTxyFQ.jpeg"
-        alt="logotype"
-      />
-      <a href={obj.url}>{obj.name}</a>
-      <p>{5 + 10}</p>
-      <Colors arr={myColors} />
+      <Greeting name={username} />
+      <Message text="sunshine" />
+      <Button func={clickFn} />
     </>
   );
 }
