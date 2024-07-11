@@ -1,18 +1,13 @@
-import "./App.css";
-import Greeting from "./components/Greeting/Greeting";
-import Message from "./components/Message/Message";
-import Button from "./components/Button/Button";
+import user from "./data/user.json";
+import Profile from "./components/Profile/Profile";
+import stats from "./data/stats.json";
+import Statistics from "./components/Statistics/Statistics";
 
 function App() {
-  function clickFn() {
-    console.log("another click happened");
-  }
-  const username = "Tetiana";
   return (
     <>
-      <Greeting name={username} />
-      <Message text="sunshine" />
-      <Button func={clickFn} />
+      <Profile user={user} />
+      <Statistics stats={stats} title="files" />
     </>
   );
 }
